@@ -1,4 +1,4 @@
--- Auto-generated from schema-views-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-views-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  replication_lag_samples_latest
 -- Latest replication lag samples per peer
@@ -12,7 +12,7 @@ SELECT
   ph.lag_sampled_at
 FROM vw_peer_health ph;
 
--- Auto-generated from schema-views-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-views-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  replication_lag_samples
 -- Contract view for [replication_lag_samples]
