@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class ReplicationLagSampleDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'peer_id' => 'peerId', 'captured_at' => 'capturedAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'peer_id' => 'peerId', 'metric' => 'metric', 'value' => 'value', 'captured_at' => 'capturedAt' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];
