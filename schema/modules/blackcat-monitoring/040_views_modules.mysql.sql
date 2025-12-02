@@ -1,6 +1,7 @@
--- Auto-generated from feature-modules-mysql.psd1 (map@mtime:2025-11-27T17:06:04Z)
+-- Auto-generated from feature-modules-mysql.yaml (map@94ebe6c)
 -- engine: mysql
--- table:  peer_nodes_health
+-- table:  peer_health
+
 -- Peer health with last lag samples
 CREATE OR REPLACE ALGORITHM=TEMPTABLE SQL SECURITY INVOKER VIEW vw_peer_health AS
 WITH ranked AS (
@@ -26,9 +27,10 @@ FROM peer_nodes p
 LEFT JOIN ranked r ON r.peer_id = p.id AND r.rn = 1
 GROUP BY p.id, p.name, p.type, p.location, p.status, p.last_seen;
 
--- Auto-generated from feature-modules-mysql.psd1 (map@mtime:2025-11-27T17:06:04Z)
+-- Auto-generated from feature-modules-mysql.yaml (map@94ebe6c)
 -- engine: mysql
--- table:  replication_lag_samples_latest
+-- table:  replication_lag_latest
+
 -- Latest replication lag samples per peer
 CREATE OR REPLACE ALGORITHM=TEMPTABLE SQL SECURITY INVOKER VIEW vw_replication_lag_latest AS
 SELECT
