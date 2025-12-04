@@ -1,4 +1,4 @@
--- Auto-generated from feature-modules-postgres.yaml (map@94ebe6c)
+-- Auto-generated from feature-modules-postgres.yaml (map@85230ed)
 -- engine: postgres
 -- table:  peer_health
 
@@ -27,7 +27,7 @@ FROM peer_nodes p
 LEFT JOIN ranked r ON r.peer_id = p.id AND r.rn = 1
 GROUP BY p.id, p.name, p.type, p.location, p.status, p.last_seen;
 
--- Auto-generated from feature-modules-postgres.yaml (map@94ebe6c)
+-- Auto-generated from feature-modules-postgres.yaml (map@85230ed)
 -- engine: postgres
 -- table:  replication_lag_latest
 
