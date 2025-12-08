@@ -5,9 +5,9 @@ Snapshot metrics measuring replication lag per peer.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| captured_at | TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Capture timestamp (UTC). |
+| captured_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Capture timestamp (UTC). |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| metric | TEXT | NO |  | Metric name (apply_lag_ms, transport_lag_ms). |
+| metric | ENUM('apply_lag_ms','transport_lag_ms') | NO |  | Metric name (apply_lag_ms, transport_lag_ms). |
 | peer_id | BIGINT | NO |  | Peer being measured (FK peer_nodes.id). |
 | value | BIGINT | NO |  | Measured value (ms). |
 
@@ -42,5 +42,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_replication_lag_samples | mysql | algorithm=MERGE, security=INVOKER | [packages\replication-lag-samples\schema\040_views.mysql.sql](https://github.com/blackcatacademy/blackcat-database/packages/replication-lag-samples/schema/040_views.mysql.sql) |
-| vw_replication_lag_samples | postgres |  | [packages\replication-lag-samples\schema\040_views.postgres.sql](https://github.com/blackcatacademy/blackcat-database/packages/replication-lag-samples/schema/040_views.postgres.sql) |
+| vw_replication_lag_samples | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
+| vw_replication_lag_samples | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
