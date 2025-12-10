@@ -42,5 +42,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_replication_lag_samples | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
-| vw_replication_lag_samples | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
+| vw_replication_lag_samples | mysql | algorithm=MERGE, security=INVOKER | [../schema/040_views.mysql.sql](../schema/040_views.mysql.sql) |
+| vw_replication_lag_samples | postgres |  | [../schema/040_views.postgres.sql](../schema/040_views.postgres.sql) |
