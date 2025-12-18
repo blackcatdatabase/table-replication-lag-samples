@@ -1,0 +1,23 @@
+{
+  "tables": {
+    "replication_lag_samples": {
+      "columns": {
+        "captured_at": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "metric": {
+          "strategy": "passthrough"
+        },
+        "peer_id": {
+          "strategy": "passthrough"
+        },
+        "value": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
