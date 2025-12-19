@@ -3,13 +3,13 @@
 Snapshot metrics measuring replication lag per peer.
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| peer_id | BIGINT | NO |  | Peer being measured (FK peer_nodes.id). |
-| metric | mysql: ENUM('apply_lag_ms','transport_lag_ms') / postgres: TEXT | NO |  | Metric name (apply_lag_ms, transport_lag_ms). |
-| value | BIGINT | NO |  | Measured value (ms). |
-| captured_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Capture timestamp (UTC). |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| id | BIGINT | NO |  | Surrogate primary key. |  |
+| peer_id | BIGINT | NO |  | Peer being measured (FK peer_nodes.id). |  |
+| metric | mysql: ENUM('apply_lag_ms','transport_lag_ms') / postgres: TEXT | NO |  | Metric name (apply_lag_ms, transport_lag_ms). |  |
+| value | BIGINT | NO |  | Measured value (ms). |  |
+| captured_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Capture timestamp (UTC). |  |
 
 ## Engine Details
 
